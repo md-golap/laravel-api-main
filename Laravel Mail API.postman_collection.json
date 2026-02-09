@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "9982cd7f-bcde-4667-a8ef-c09f3f37ed1b",
+		"name": "Laravel Mail API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1948434"
+	},
+	"item": [
+		{
+			"name": "send-email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "45b410909034b8f7266cc88a6819174cbeef2079fb2e4fe67a57586af4abec2b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "access-key-user-1",
+						"type": "text"
+					},
+					{
+						"key": "ts",
+						"value": "2023-08-09T17:13:58+00:00",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from",
+							"value": "contato@newenglishbr.com",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "jonatas094@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "sender",
+							"value": "New English",
+							"type": "text"
+						},
+						{
+							"key": "receiver",
+							"value": "Jonatas S.",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "test api",
+							"type": "text"
+						},
+						{
+							"key": "template",
+							"value": "password",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "en",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "attachments[]",
+							"type": "file",
+							"src": [
+								"/C:/Users/jonat/Downloads/Sobremesa Lvtetia.pdf",
+								"/C:/Users/jonat/Downloads/MENU DO BAR VATICANO.pdf"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/email/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"email",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
